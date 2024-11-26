@@ -1,2 +1,106 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+{{!-- <h1>{{title}}</h1>
+<p>Welcome to {{title}}</p> --}}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chessboard</title>
+    <script src="../javascripts/index.js" defer></script>
+</head>
+<body>
+    <div id="main">
+        <form name="myForm" class="my-form">
+            <h3>Please select the color:</h3>
+            <input type="radio" id="white" name="fav_color" value="WHITE">
+            <label for="white">WHITE</label><br>
+            <input type="radio" id="black" name="fav_color" value="BLACK">
+            <label for="black">BLACK</label>
+        </form>
+        <table id="chess-table">
+            <tr>
+                <td class="cell" id="H1"><span class="prefix">H1</span></td>
+                <td class="cell" id="H2"><span class="prefix">H2</span></td>
+                <td class="cell" id="H3"><span class="prefix">H3</span></td>
+                <td class="cell" id="H4"><span class="prefix">H4</span></td>
+                <td class="cell" id="H5"><span class="prefix">H5</span></td>
+                <td class="cell" id="H6"><span class="prefix">H6</span></td>
+                <td class="cell" id="H7"><span class="prefix">H7</span></td>
+                <td class="cell" id="H8"><span class="prefix">H8</span></td>
+            </tr>
+            <tr>
+                <td class="cell" id="G1"><span class="prefix">G1</span></td>
+                <td class="cell" id="G2"><span class="prefix">G2</span></td>
+                <td class="cell" id="G3"><span class="prefix">G3</span></td>
+                <td class="cell" id="G4"><span class="prefix">G4</span></td>
+                <td class="cell" id="G5"><span class="prefix">G5</span></td>
+                <td class="cell" id="G6"><span class="prefix">G6</span></td>
+                <td class="cell" id="G7"><span class="prefix">G7</span></td>
+                <td class="cell" id="G8"><span class="prefix">G8</span></td>
+            </tr>
+            <tr>
+                <td class="cell" id="F1"><span class="prefix">F1</span></td>
+                <td class="cell" id="F2"><span class="prefix">F2</span></td>
+                <td class="cell" id="F3"><span class="prefix">F3</span></td>
+                <td class="cell" id="F4"><span class="prefix">F4</span></td>
+                <td class="cell" id="F5"><span class="prefix">F5</span></td>
+                <td class="cell" id="F6"><span class="prefix">F6</span></td>
+                <td class="cell" id="F7"><span class="prefix">F7</span></td>
+                <td class="cell" id="F8"><span class="prefix">F8</span></td>
+            </tr>
+            <tr>
+                <td class="cell" id="E1"><span class="prefix">E1</span></td>
+                <td class="cell" id="E2"><span class="prefix">E2</span></td>
+                <td class="cell" id="E3"><span class="prefix">E3</span></td>
+                <td class="cell" id="E4"><span class="prefix">E4</span></td>
+                <td class="cell" id="E5"><span class="prefix">E5</span></td>
+                <td class="cell" id="E6"><span class="prefix">E6</span></td>
+                <td class="cell" id="E7"><span class="prefix">E7</span></td>
+                <td class="cell" id="E8"><span class="prefix">E8</span></td>
+            </tr>
+            <tr>
+                <td class="cell" id="D1"><span class="prefix">D1</span></td>
+                <td class="cell" id="D2"><span class="prefix">D2</span></td>
+                <td class="cell" id="D3"><span class="prefix">D3</span></td>
+                <td class="cell" id="D4"><span class="prefix">D4</span></td>
+                <td class="cell" id="D5"><span class="prefix">D5</span></td>
+                <td class="cell" id="D6"><span class="prefix">D6</span></td>
+                <td class="cell" id="D7"><span class="prefix">D7</span></td>
+                <td class="cell" id="D8"><span class="prefix">D8</span></td>
+            </tr> 
+            <tr> 
+                <td class="cell" id="C1"><span class="prefix">C1</span></td>
+                <td class="cell" id="C2"><span class="prefix">C2</span></td>
+                <td class="cell" id="C3"><span class="prefix">C3</span></td>
+                <td class="cell" id="C4"><span class="prefix">C4</span></td>
+                <td class="cell" id="C5"><span class="prefix">C5</span></td>
+                <td class="cell" id="C6"><span class="prefix">C6</span></td>
+                <td class="cell" id="C7"><span class="prefix">C7</span></td>
+                <td class="cell" id="C8"><span class="prefix">C8</span></td>
+            </tr> 
+            <tr> 
+                <td class="cell" id="B1"><span class="prefix">B1</span></td>
+                <td class="cell" id="B2"><span class="prefix">B2</span></td>
+                <td class="cell" id="B3"><span class="prefix">B3</span></td>
+                <td class="cell" id="B4"><span class="prefix">B4</span></td>
+                <td class="cell" id="B5"><span class="prefix">B5</span></td>
+                <td class="cell" id="B6"><span class="prefix">B6</span></td>
+                <td class="cell" id="B7"><span class="prefix">B7</span></td>
+                <td class="cell" id="B8"><span class="prefix">B8</span></td>
+            </tr> 
+            <tr> 
+                <td class="cell" id="A1"><span class="prefix">A1</span></td>
+                <td class="cell" id="A2"><span class="prefix">A2</span></td>
+                <td class="cell" id="A3"><span class="prefix">A3</span></td>
+                <td class="cell" id="A4"><span class="prefix">A4</span></td>
+                <td class="cell" id="A5"><span class="prefix">A5</span></td>
+                <td class="cell" id="A6"><span class="prefix">A6</span></td>
+                <td class="cell" id="A7"><span class="prefix">A7</span></td>
+                <td class="cell" id="A8"><span class="prefix">A8</span></td>
+            </tr>
+        </table>
+    </div>  
+</body>
+</html>

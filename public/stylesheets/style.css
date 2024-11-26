@@ -1,8 +1,79 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+:root {
+  --primary-color: rgb(7, 87, 7);
+  --secondary-color: aquamarine;
+  --nursery-color: rgb(105, 100, 100);
+  --tertiary-color: rgb(36, 35, 35);
+  --black-color: black;
+  --white-color: white;
 }
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  touch-action: pan-x pan-y;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+html {
+  overflow-x: hidden;
+}
+.main-page {
+  display: flex;
+  height: 100%;
+}
+#sidebar {
+  background-color: var(--tertiary-color);
+  padding: 10px;
+  width: 13%;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar-item {
+  text-decoration: none;
+  color: var(--white-color);
+  font-size: 20px;
+  padding: 15px 10px;
+}
+.sidebar-item:hover {
+  background-color: var(--black-color);
+}
+#main {
+  width: 85%;
+  padding: 50px 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  /* background-color: var(--nursery-color); */
+}
+.my-form {
+  padding: 10em 3.125em;
 
-a {
-  color: #00B7FF;
+}
+table {
+  border-spacing: 0px;
+}
+.prefix {
+  font-size: 10px;
+  padding-right: 10px;
+}
+table td {
+  /* padding: 20px; */
+  width: 60px;
+  vertical-align: top;
+  font-size: 35px;
+}
+.prefix::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+table tr td {
+  background-color: var(--secondary-color);
+}
+table tr:nth-child(odd) td:nth-child(even), tr:nth-child(even) td:nth-child(odd) {
+  background-color: var(--primary-color);
+}
+input[type="radio"] {
+  cursor: pointer;
 }
